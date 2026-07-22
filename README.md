@@ -23,7 +23,8 @@ The dashboard provides insights that support data-driven decision mking to impro
 # **The Measures and Calculations I Created**
 
 Some of the DAX Measures used include:
-1. **Total Sales Revenue** = sum('power bi jcars'[Revenue Recorded.1])
+1. **Total&nbsp;Sales&nbsp;Revenue**&nbsp;=<br><span class="Keyword" style="color:#035aca">SUM</span><span class="Parenthesis" style="color:#808080">&nbsp;(</span>&nbsp;'power&nbsp;bi&nbsp;jcars'[Revenue&nbsp;Recorded.1]&nbsp;<span class="Parenthesis" style="color:#808080">)</span><br>
+
 2. **Total Cars Sold** = SUM('power bi jcars'[Units Sold])
 3. **Number of Orders**= DISTINCTCOUNT('power bi jcars'[Order ID])
 4. **Gross Profit** = SUMX('power bi jcars','power bi jcars'[Revenue Recorded.1]+'power bi jcars'[Delivery Fee.1]- (DIVIDE('power bi jcars'[Revenue Recorded.1],'power bi jcars'[Unit Selling Price], 0)*'power bi jcars'[Unit Costt])-'power bi jcars'[Logistics Cost.1])
