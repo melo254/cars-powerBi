@@ -1,4 +1,5 @@
 # cars-powerBi
+
 **Jcars Project Objective**
 
 The objective of the Jcars Project was to analyze vehicle sales data and develop an interactive Power Bi Dashboard that enables management to monitor sales performance, profitability, customer behaviour and branch performance.
@@ -12,14 +13,14 @@ The dashboard provides insights that support data-driven decision mking to impro
 3. Imported the cleaned Jcars dataset into the PostgreSQL tables using SQL import commands.
 4. Cross-checked that all records were successfully loaded.
 
-**How I Connected Power Bi to the Database**
+# **How I Connected Power Bi to the Database**
 1. Opened Power Bi Desktop
 2. Selected **Get Data** - **PostgreSQL Database**
 3. Entered the Aiven PostgreSQL server name and database name.
 4. Provided the database credentials.
 5. Loaded the data into power Bi.
 
-**The Measures and Calculations I Created**
+# **The Measures and Calculations I Created**
 
 Some of the DAX Measures used include:
 1. **Total Sales Revenue** = sum('power bi jcars'[Revenue Recorded.1])
@@ -39,7 +40,7 @@ Some of the DAX Measures used include:
 15. **Most Returned or Cancelled Car** = VAR TopCar =TOPN(1,SUMMARIZE('power bi jcars','power bi jcars'[Car Model],"ReturnCancelCount",CALCULATE(COUNTROWS('power bi jcars'),'power bi jcars'[Delivery Status] IN {"Returned","Cancelled"})),[ReturnCancelCount],DESC) RETURN MAXX(TopCar,'power bi jcars'[Car Model]) & "  = " & FORMAT(MAXX(TopCar,[ReturnCancelCount]), "#,##0") & " returns/cancellations"
 16. **Top Branch By Revenue** = MAXX(TOPN(1,VALUES('power bi jcars'[Branch]),[Total Sales Revenue],DESC),'power bi jcars'[Branch])
 
-**The Visuals Included in my Dashboard**
+# **The Visuals Included in my Dashboard**
 
 
 1. **KPI Cards**
@@ -115,7 +116,7 @@ Bar charts make it easy to compare categories such as car makes.
 
 Slicers provide interactivity, allowing users to customize the dashboard based on their analysis needs.
 
-**Some of my Key Insights Include:**
+# **Some of my Key Insights Include:**
 
 From the dashboard, I discovered that:
 
@@ -139,7 +140,7 @@ There were **255** Customers.
 
 Most orders had a **delivered status**, indicating efficient order fulfillment.
 
-**Recommendations**
+# **Recommendations**
 1. Increase inventory and marketing for SUVs, especially Toyota models such as Harrier, since they drive the most revenue.
 2. Invest more in instagram marketing because it generates the highest revenue from customerleads.
 3. Focus on expanding sales efforts in Rift Valley and Kiambu while developing strategies to improve underperforming regions.
